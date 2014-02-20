@@ -30,15 +30,9 @@
 &nbsp;
                 <asp:Button ID="ClearButton" runat="server" Text="Clear" Width="80px" />
             </p>
-    
-        
-        
-        
+   
         </div>
-    
-    
-    
-    
+
     </form>
 </body>
 </html>

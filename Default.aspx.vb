@@ -13,12 +13,14 @@ Partial Class _Default
         Dim Tax As Decimal
         Dim Pay As Decimal
         Dim PostTax As Decimal
+        Dim output As Decimal
 
         'Assign Variables
         Hours = Val(HoursTB.Text)
         Wage = Val(WageTB.Text)
         PreTax = Val(PreTaxTB.Text)
         PostTax = Val(PostTaxTB.Text)
+        output = Val(NetPayLB.Text)
 
         'Calculate Gross Pay
         GrossPay = Hours * Wage
@@ -37,7 +39,9 @@ Partial Class _Default
         Pay = Taxable - Tax
 
         'Calculate Net Pay
-        NetPayLB.Text = Pay - Val(PostTaxTB.Text)
+        output = Pay - Val(PostTaxTB.Text)
+        'Format Output
+        NetPayLB.Text = String.Format("{0:C}", output)
 
     End Sub
 
